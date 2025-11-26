@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiheum Park Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .section-content { display: none; }
+        .section-content.active { display: block; }
+        .nav-btn.active { border-bottom: 2px solid #2563eb; color: #2563eb; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <h1 class="text-4xl font-bold text-gray-900">Jiheum Park Lab</h1>
+            <p class="text-xl text-gray-600 mt-2">Principal Investigator: Dr. Jiheum Park</p>
+            <p class="text-gray-500 mt-1">jiheumparklab.org</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex space-x-8">
+                <button onclick="showSection('about')" class="nav-btn active flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
+                    <span class="font-medium">About</span>
+                </button>
+                <button onclick="showSection('research')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
+                    <span class="font-medium">Research</span>
+                </button>
+                <button onclick="showSection('publications')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
+                    <span class="font-medium">Publications</span>
+                </button>
+                <button onclick="showSection('teaching')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
+                    <span class="font-medium">Teaching</span>
+                </button>
+                <button onclick="showSection('contact')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
+                    <span class="font-medium">Contact</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- About Section -->
+        <div id="about" class="section-content active">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" 
+                             alt="Lab Profile" 
+                             class="rounded-lg w-full shadow-md">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">About the Lab</h2>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            The Jiheum Park Lab is dedicated to advancing research at the intersection of computational methods 
+                            and biological sciences. Our research focuses on developing innovative approaches to understanding 
+                            complex biological systems through data-driven analysis and cutting-edge computational techniques.
+                        </p>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Led by Dr. Jiheum Park, our interdisciplinary team combines expertise in computer science, 
+                            statistics, and biology to tackle fundamental questions in the life sciences. We welcome 
+                            collaborations and inquiries from researchers, students, and industry partners.
+                        </p>
+                        <div class="mt-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Research Interests</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Computational Biology</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Data Science</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Genomics</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Statistical Methods</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Section -->
+        <div id="research" class="section-content">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Research</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Current Projects</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-600 pl-4">
+                                <h4 class="font-semibold text-lg text-gray-900">Deep Learning for Protein Structure Prediction</h4>
+                                <p class="text-gray-700 mt-2">
+                                    Developing advanced neural network architectures to predict protein structures from amino acid sequences. 
+                                    Funded by NSF Grant #12345.
+                                </p>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-4">
+                                <h4 class="font-semibold text-lg text-gray-900">Statistical Methods for Single-Cell RNA-seq Analysis</h4>
+                                <p class="text-gray-700 mt-2">
+                                    Creating novel statistical approaches for analyzing high-dimensional single-cell genomics data. 
+                                    Collaboration with Stanford Medical School.
+                                </p>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-4">
+                                <h4 class="font-semibold text-lg text-gray-900">Machine Learning for Drug Discovery</h4>
+                                <p class="text-gray-700 mt-2">
+                                    Applying machine learning techniques to accelerate the drug discovery process through 
+                                    computational screening and optimization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publications Section -->
+        <div id="publications" class="section-content">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Publications</h2>
+                <div class="space-y-6">
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="font-semibold text-lg text-gray-900 mb-2">Machine Learning Applications in Computational Biology</h3>
+                        <p class="text-gray-600 text-sm mb-1">Park, J., Johnson, A., & Williams, R.</p>
+                        <p class="text-gray-500 text-sm italic">Nature Computational Science, 2024</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 text-sm mt-2 inline-block">View Publication →</a>
+                    </div>
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="font-semibold text-lg text-gray-900 mb-2">Novel Approaches to Data Analysis in Genomics</h3>
+                        <p class="text-gray-600 text-sm mb-1">Park, J., & Chen, L.</p>
+                        <p class="text-gray-500 text-sm italic">Journal of Computational Biology, 2023</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 text-sm mt-2 inline-block">View Publication →</a>
+                    </div>
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="font-semibold text-lg text-gray-900 mb-2">Statistical Methods for High-Dimensional Data</h3>
+                        <p class="text-gray-600 text-sm mb-1">Park, J.</p>
+                        <p class="text-gray-500 text-sm italic">Statistical Science, 2023</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 text-sm mt-2 inline-block">View Publication →</a>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View complete publication list on Google Scholar →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teaching Section -->
+        <div id="teaching" class="section-content">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Teaching</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Current Courses</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold text-lg text-gray-900">CS 301: Introduction to Machine Learning</h4>
+                                    <p class="text-gray-600 text-sm">Fall 2024</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold text-lg text-gray-900">CS 450: Advanced Data Science</h4>
+                                    <p class="text-gray-600 text-sm">Spring 2025</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold text-lg text-gray-900">CS 502: Computational Biology</h4>
+                                    <p class="text-gray-600 text-sm">Fall 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Graduate Students</h3>
+                        <p class="text-gray-700">
+                            We are currently advising 4 Ph.D. students and 2 Master's students. We welcome inquiries from 
+                            prospective students interested in machine learning and computational biology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section-content">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Email</h3>
+                            <a href="mailto:contact@jiheumparklab.org" class="text-blue-600 hover:text-blue-800">
+                                contact@jiheumparklab.org
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Office</h3>
+                            <p class="text-gray-700">
+                                Computer Science Building, Room 401<br>
+                                123 University Avenue<br>
+                                City, State 12345
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Office Hours</h3>
+                            <p class="text-gray-700">
+                                Tuesdays and Thursdays, 2:00 PM - 4:00 PM<br>
+                                Or by appointment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <p class="text-center text-gray-400">
+                © 2024 Jiheum Park Lab. All rights reserved. | jiheumparklab.org
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.closest('.nav-btn').classList.add('active');
+        }
+    </script>
+</body>
+</html>
