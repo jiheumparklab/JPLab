@@ -35,6 +35,12 @@
                 <button onclick="showSection('collaborators')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
                     <span class="font-medium">Collaborators</span>
                 </button>
+                <button onclick="showSection('team')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
+                    <span class="font-medium">Team</span>
+                </button>
+                <button onclick="showSection('funding')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
+                    <span class="font-medium">Funding</span>
+                </button>
                 <button onclick="showSection('positions')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
                     <span class="font-medium">Positions</span>
                 </button>
@@ -308,6 +314,77 @@
             </div>
         </div>
 
+        <!-- Team Section -->
+        <div id="team" class="section-content">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Team</h2>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-blue-600 pl-4 py-2">
+                        <h3 class="font-semibold text-lg text-gray-900">Jiyoon Lee</h3>
+                        <p class="text-gray-600 mt-1">Columbia University M.Sc. Candidate in Biostatistics</p>
+                    </div>
+                    <div class="border-l-4 border-blue-600 pl-4 py-2">
+                        <h3 class="font-semibold text-lg text-gray-900">Jeong Yun (John) Yang, M.D.</h3>
+                        <p class="text-gray-600 mt-1">T32 Postdoctoral Gastroenterology Fellow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Funding Section -->
+        <div id="funding" class="section-content">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Funding</h2>
+                
+                <div class="space-y-8">
+                    <!-- Active Grant 1 -->
+                    <div class="border-l-4 border-green-600 pl-4 py-2">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+                        </div>
+                        <div class="space-y-1 text-sm">
+                            <p><strong>Grant Number:</strong> PA240089</p>
+                            <p><strong>Agency:</strong> DoD</p>
+                            <p><strong>Title:</strong> Enhancing Early Detection of Pancreatic Cancer Using GPT-Embedded EHR Models: A Novel Approach for Improved Predictive Performance and Interpretability</p>
+                            <p><strong>P.I.:</strong> Park, J.</p>
+                            <p><strong>Total costs:</strong> $1,063,983</p>
+                            <p><strong>Project period:</strong> 08/01/2025 - 07/31/2028</p>
+                        </div>
+                    </div>
+
+                    <!-- Active Grant 2 -->
+                    <div class="border-l-4 border-green-600 pl-4 py-2">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+                        </div>
+                        <div class="space-y-1 text-sm">
+                            <p><strong>Grant Number:</strong> 1K25CA267052-01</p>
+                            <p><strong>Agency:</strong> NIH</p>
+                            <p><strong>Title:</strong> Early Detection of Pancreatic Cancer with Human-in-the-Loop Deep Learning</p>
+                            <p><strong>P.I.:</strong> Park, J.</p>
+                            <p><strong>Total costs:</strong> $893,050</p>
+                            <p><strong>Project period:</strong> 05/01/2023-04/30/2028</p>
+                        </div>
+                    </div>
+
+                    <!-- Completed Grant -->
+                    <div class="border-l-4 border-gray-400 pl-4 py-2">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold">Completed</span>
+                        </div>
+                        <div class="space-y-1 text-sm">
+                            <p><strong>Grant Number:</strong> 1R21CA265400-01</p>
+                            <p><strong>Agency:</strong> NCI</p>
+                            <p><strong>Title:</strong> Domain-Knowledge Informed Deep Learning for Early Detection of Pancreatic Cancer</p>
+                            <p><strong>P.I.:</strong> Hur, C.; Tatonetti, N. (Park, J. served as scientific lead and primary proposal developer during postdoctoral training)</p>
+                            <p><strong>Total costs:</strong> $432,170</p>
+                            <p><strong>Project period:</strong> 07/01/2021-06/30/2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Collaborators Section -->
         <div id="collaborators" class="section-content">
             <div class="bg-white rounded-lg shadow-sm p-8">
@@ -366,18 +443,17 @@
         <div id="positions" class="section-content">
             <div class="bg-white rounded-lg shadow-sm p-8">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Open Positions</h2>
-                </p>
                 <div class="space-y-4">
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="font-semibold text-lg text-gray-900">Postdoctroal Researcher</h3>
-                        <p class="text-gray-700 mt-2">
+                    <div class="border-l-4 border-blue-600 pl-4 py-2">
+                        <h3 class="font-semibold text-lg text-gray-900 mb-3">Postdoctoral Researcher</h3>
+                        <p class="text-gray-700 leading-relaxed mb-3">
                             We welcome applications from individuals with backgrounds in engineering, computer science, biomedical informatics, data science, statistics, or related fields. This position is ideal for researchers who want to expand into clinical data science, longitudinal EHR modeling, and precision medicine. Experience with machine learning, computational modeling, or large-scale health data is especially valuable.
+                        </p>
+                        <p class="text-gray-700">
+                            Please contact <a href="mailto:jp4147@cumc.columbia.edu" class="text-blue-600 hover:underline">jp4147@cumc.columbia.edu</a> with your CV and research interests.
                         </p>
                     </div>
                 </div>
-                <p class="text-gray-700 mt-6">
-                    Please contact <a href="mailto:jp4147@cumc.columbia.edu" class="text-blue-600 hover:underline">jp4147@cumc.columbia.edu</a> with your CV and research interests.
-                </p>
             </div>
         </div>
     </main>
