@@ -1,569 +1,402 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPLab</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JPLab | Jiheum Park</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
         .section-content { display: none; }
         .section-content.active { display: block; }
         .nav-btn.active { border-bottom: 2px solid #2563eb; color: #2563eb; }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-8">
-            <h1 class="text-4xl font-bold text-gray-900">JPLab</h1>
-        </div>
-    </header>
+<!-- Header -->
+<header class="bg-white shadow-sm">
+<div class="max-w-6xl mx-auto px-6 py-8">
+<h1 class="text-4xl font-bold text-gray-900">JPLab</h1><p class="text-gray-600 mt-2 text-sm sm:text-base">AI for Early Cancer Detection and Precision Medicine</p>
+</div>
+</header>
+<!-- Navigation -->
+<nav class="bg-white border-b border-gray-200 sticky top-0 z-10">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex gap-x-6 overflow-x-auto whitespace-nowrap">
+<button class="nav-btn active flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors" onclick="showSection('about', this)">
+<span class="font-medium">About</span>
+</button>
+<button class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors" onclick="showSection('research', this)">
+<span class="font-medium">Research</span>
+</button>
+<button class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors" onclick="showSection('publications', this)">
+<span class="font-medium">Publications</span>
+</button>
+<button class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors" onclick="showSection('collaborators', this)">
+<span class="font-medium">External Collaborators</span>
+</button>
 
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex space-x-8">
-                <button onclick="showSection('about')" class="nav-btn active flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
-                    <span class="font-medium">About</span>
-                </button>
-                <button onclick="showSection('research')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
-                    <span class="font-medium">Research</span>
-                </button>
-                <button onclick="showSection('publications')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
-                    <span class="font-medium">Publications</span>
-                </button>
-                <button onclick="showSection('collaborators')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
-                    <span class="font-medium">Collaborators</span>
-                </button>
-                <button onclick="showSection('team')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
-                    <span class="font-medium">Team</span>
-                </button>
-                <button onclick="showSection('funding')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
-                    <span class="font-medium">Funding</span>
-                </button>
-                <button onclick="showSection('positions')" class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors">
-                    <span class="font-medium">Positions</span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-6 py-12">
-        <!-- About Section -->
-        <div id="about" class="section-content active">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <div class="flex flex-col gap-8">
-                    <!-- LEFT COLUMN: contact info -->
-                    <div class="max-w-sm">
-                        <div class="flex items-start gap-4">
-                            <img src="https://lh3.googleusercontent.com/d/1J1b8nLs897PcCUJestTsVOCOzv69dp83" 
-                                 alt="Jiheum Park" 
-                                 class="rounded-lg w-40 h-40 object-cover object-top shadow-md flex-shrink-0">
-                            <div>
-                                <p class="text-gray-900 font-bold text-lg leading-tight">
-                                    Jiheum Park, PhD
-                                </p>
-                                <p class="text-gray-600 text-sm mt-1 leading-tight whitespace-nowrap">
-                                    Assistant Professor<br>
-                                    Division of Health Informatics and Artificial Intelligence<br>
-                                    Department of Population Health Sciences<br>
-                                    Weill Cornell Medicine<br>
-                                    <a href="mailto:jip7012@med.cornell.edu" class="text-blue-600 hover:underline">
-                                        jip7012@med.cornell.edu
-                                    </a>
-                                </p>
-                                
-                                <div class="mt-2">
-                                    <a href="./JPark_CV.pdf?v=20261007"
-                                       target="_blank"
-                                       class="text-blue-600 hover:underline text-sm">
-                                        Curriculum Vitae
-                                    </a>
-                                
-                                    <span class="text-gray-400 mx-2">|</span>
-                                
-                                    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=T7c9nmUAAAAJ&gmla=AERr9JFTUX3vr5QsiTikvSH6tNmLjfnvjjXXzPZHJwy35HaaNdktbzcr-SylxZnkqISjyS68MKrvR_sOSv6lYIa8Ivo57hqGpJPbvCb8rhFOqng"
-                                       class="text-blue-600 hover:underline text-sm whitespace-nowrap">
-                                        Google Scholar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- RIGHT COLUMN: about text -->
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">About the Lab</h2>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            The JPLab develops computational methods and clinically grounded systems that support precision 
-                            medicine by enabling earlier disease detection, personalized screening, and data-informed treatment decisions. 
-                            Our work focuses on learning from large-scale longitudinal health data, including electronic health records and 
-                            genomic information, to model patient trajectories and identify meaningful patterns that can guide clinical care.
-                        </p>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Drawing on multidisciplinary training in engineering, data science, and medicine, the lab bridges advanced 
-                            computational approaches with the needs of real clinical practice. We work closely with collaborators across 
-                            multiple health systems to ensure that the methods we develop are interpretable, actionable, and feasible for 
-                            deployment in routine care.
-                        </p>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            We welcome collaborations and inquiries from researchers, clinicians, and students interested in advancing 
-                            precision medicine through thoughtful and practical computational innovation.
-                        </p>
-                        <div class="mt-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Research Interests</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Biomedical Informatics</span>
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Machine Learning for Health</span>
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Precision Medicine</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Research Section -->
-        <div id="research" class="section-content">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Research</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Current Projects</h3>
-                        <div class="space-y-6">
-                            <div class="border-l-4 border-blue-600 pl-4 py-1">
-                                <h4 class="font-semibold text-lg text-gray-900">Predictive modeling using electronic health records (EHR)</h4>
-                                <p class="text-gray-700 mt-2">
-                                    <strong>EHRs represent a large-scale but underutilized resource for early detection.</strong> As routinely collected data sources, EHRs capture longitudinal trajectories of diagnoses, medications, procedures, laboratory results, and healthcare utilization. These data can reveal prediagnostic signals and enable personalized risk profiling at scale. Compared to many other emerging early detection technologies such as advanced biosensors, digital imaging, and blood-based liquid biopsy tests, which often face barriers including sample collection requirements, high cost, and limited coverage, EHRs are non-invasive, low-cost, and already embedded in routine clinical care. Leveraging EHRs as a first-line or complementary tool could transform early detection and expand equitable access, particularly in underserved populations.
-                                </p>
-                            </div>
-                            <div class="border-l-4 border-blue-600 pl-4 py-1">
-                                <h4 class="font-semibold text-lg text-gray-900">Multi-cancer prediction using EHR foundation models</h4>
-                                <p class="text-gray-700 mt-2">
-                                    <strong>Foundation models enable powerful new ways to learn from EHR data.</strong> Recent advances in large-scale representation learning have unlocked the potential to derive predictive signals from complex longitudinal health records. Analogous to how large language models such as ChatGPT are trained on vast amounts of text to generate broadly useful representations of language, EHR foundation models are trained on longitudinal patient trajectories to capture transferable clinical representations that can generalize across prediction tasks. Our preliminary work demonstrates that such models substantially improve cancer risk prediction compared with traditional supervised approaches, across multiple cancer types and health systems. These findings establish the feasibility of a unified, scalable, and generalizable EHR-based early detection system.
-                                </p>
-                            </div>
-                            <div class="border-l-4 border-blue-600 pl-4 py-1">
-                                <h4 class="font-semibold text-lg text-gray-900">Interactive system for model explanation</h4>
-                                <p class="text-gray-700 mt-2">
-                                    <strong>Conversational AI can enhance interpretability and clinician trust.</strong> Despite substantial gains in predictive accuracy, clinical adoption of AI models remains limited because outputs are often distorted by noise or bias in underlying data and explained in ways that fail to earn clinician trust. Traditional explainability tools (e.g., SHAP, LIME, DeepLift) frequently surface institution-specific artifacts rather than clinically meaningful factors, while manual feature curation is unsustainable and risks omitting useful signals. To bridge this gap, clinicians need explanations that are both transparent and actionable, reflecting model reasoning in the context of real patient data. Our approach links an EHR foundation model with a conversational interface that generates SOAP-formatted summaries and dialogue-based explanations grounded in the patient timelines used by the model, model-derived features, risk scores, and clinical notes. This allows clinicians to explore why a patient was flagged as high risk, cross-check model predictions with evidence documented in clinical notes, and determine whether predictions are clinically reasonable. This methodological study aligns with Aim 2's retrospective counterfactual analysis, which identifies and thresholds high-risk cohorts, by evaluating whether clinician interaction with the interface can further refine these cohorts to enrich true positives and reduce false positives. By combining structured and unstructured data within an interactive, clinician-facing interface, this system transforms static model outputs into interpretable, evidence-linked explanations, an essential step toward safe and trustworthy clinical deployment of predictive models for early detection.
-                                </p>
-                            </div>
-                            <div class="border-l-4 border-blue-600 pl-4 py-1">
-                                <h4 class="font-semibold text-lg text-gray-900">Clinical decision-making for optimal cancer treatment</h4>
-                                <p class="text-gray-700 mt-2">
-                                    <strong>We develop data-driven frameworks to guide safer and more individualized cancer treatment decisions.</strong> Treatment decisions for cancer patients are complex and often influenced by subtle clinical factors that are difficult to capture with traditional approaches. Using longitudinal EHR data from CUIMC, we are developing predictive tools that estimate the risk of treatment-related adverse events based on each patient's clinical history. By integrating large-scale propensity score methods and interaction analyses, we identify clinical profiles associated with safer or riskier responses to chemotherapy, immunotherapy, and targeted therapies. We aim to translate findings into clinically meaningful guidance for selecting treatment strategies tailored to individual patients.
-                                </p>
-                            </div>
-                            <div class="border-l-4 border-blue-600 pl-4 py-1">
-                                <h4 class="font-semibold text-lg text-gray-900">Leveraging genetic data for risk prediction</h4>
-                                <p class="text-gray-700 mt-2">
-                                    <strong>We use genomic foundation models to improve variant interpretation and enhance risk prediction across diverse populations.</strong> Genetic and genomic information offers powerful insights into disease susceptibility, but many variants remain difficult to interpret in clinical practice. Our lab explores genomic foundation models that learn evolutionary and structural constraints across hundreds of mammalian genomes to better characterize disease-associated variants. Building on recent work in idiopathic pulmonary fibrosis and Lynch syndrome, we generate individual-level genetic embeddings that improve risk prediction across diverse populations and help clarify variants of uncertain significance. We also integrate genomic and EHR-derived representations to identify individuals who may benefit from confirmatory germline testing, supporting earlier detection and more proactive precision medicine strategies.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Publications Section -->
-        <div id="publications" class="section-content">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Publications</h2>
-                
-                <!-- Category 1 -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Data science research in healthcare data</h3>
-                    <div class="space-y-4">
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+<button class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors" onclick="showSection('funding', this)">
+<span class="font-medium">Funding</span>
+</button>
+<button class="nav-btn flex items-center space-x-2 py-4 border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition-colors" onclick="showSection('positions', this)">
+<span class="font-medium">Positions</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-6xl mx-auto px-6 py-12">
+<!-- About Section -->
+<div class="section-content active" id="about">
+<div class="bg-white rounded-lg shadow-sm p-8"><div class="space-y-7">
+<div>
+<h2 class="text-3xl font-bold text-gray-900 mb-4">About the Lab</h2>
+<p class="text-gray-700 leading-relaxed mb-4">JPLab develops computational methods to advance early disease detection, personalized screening, and precision medicine. Our research uses longitudinal electronic health records (EHRs), genomic data, and modern AI methods to model patient trajectories and support clinically meaningful decisions.</p>
+<p class="text-gray-700 leading-relaxed">We work with clinical and computational collaborators across healthcare institutions to develop methods that are robust, interpretable, and relevant to real-world care. We welcome research collaborations and inquiries from prospective trainees.</p>
+</div>
+<div class="border-t border-gray-200 pt-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Principal Investigator</h3>
+<p class="font-semibold text-lg text-gray-900">Jiheum Park, PhD</p>
+<p class="text-gray-600 text-sm leading-relaxed mt-1">Assistant Professor<br/>Division of Health Informatics and Artificial Intelligence<br/>Department of Population Health Sciences<br/>Weill Cornell Medicine</p>
+<div class="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-sm">
+<a class="text-blue-600 hover:underline" href="mailto:jip7012@med.cornell.edu">Email</a>
+<a class="text-blue-600 hover:underline" href="./JPark_CV.pdf?v=20261007" rel="noopener noreferrer" target="_blank">Curriculum Vitae</a>
+<a class="text-blue-600 hover:underline" href="https://scholar.google.com/citations?hl=en&amp;user=T7c9nmUAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Research Section -->
+<div class="section-content" id="research">
+<div class="bg-white rounded-lg shadow-sm p-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Research</h2>
+<div class="space-y-6">
+<div class="border-l-4 border-blue-600 pl-4 py-1">
+<h3 class="font-semibold text-lg text-gray-900">AI for Early Cancer Detection</h3>
+<p class="text-gray-700 mt-2 leading-relaxed">We develop EHR-based predictive models and foundation models to identify patients at elevated cancer risk, study transferable signals across cancer types, and support personalized screening and risk stratification across healthcare systems.</p>
+</div>
+<div class="border-l-4 border-blue-600 pl-4 py-1">
+<h3 class="font-semibold text-lg text-gray-900">Interpretable and Trustworthy Clinical AI</h3>
+<p class="text-gray-700 mt-2 leading-relaxed">We investigate knowledge-augmented AI, longitudinal patient representations, and clinician-facing interfaces to make predictions more interpretable, evidence-grounded, and useful in clinical decision-making.</p>
+</div>
+<div class="border-l-4 border-blue-600 pl-4 py-1">
+<h3 class="font-semibold text-lg text-gray-900">Precision Medicine and Treatment Optimization</h3>
+<p class="text-gray-700 mt-2 leading-relaxed">We combine EHR and genomic information to improve risk assessment and study treatment effectiveness and safety. Our interests include genetic risk prediction, real-world evidence, and causal inference for individualized treatment decisions.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Publications Section -->
+<div class="section-content" id="publications">
+<div class="bg-white rounded-lg shadow-sm p-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Publications</h2>
+<!-- Category 1 -->
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Data science research in healthcare data</h3>
+<div class="space-y-4">
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Pang C, Lee T, Berkowitz J, Wei A, Tatonetti N. Toward Scalable Early Cancer Detection: Evaluating EHR-Based Predictive Models Against Traditional Screening Criteria. <em>npj Precision Oncology</em>. 2026 May 15;10(1):299. PMCID: PMC13424105 
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Pang C, Park J, Jiang X, Pavinkurve NP, Kalluri KS, Joshi S, Elhadad N, Natarajan K. CEHR-XGPT: A Scalable Multi-Task Foundation Model for Electronic Health Records. <em>arXiv preprint arXiv:2509.03643</em>. 2025 Sep 3.
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Patterson J, Acitores Cortina JM, Gu T, Hur C, Tatonetti N. Enhancing EHR-based pancreatic cancer prediction with LLM-derived embeddings. <em>npj Digital Medicine</em>. 2025 Jul 21;8(1):465. PMCID: PMC12280092
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Artin MG, Lee KE, May BL, Park M, Hur C, Tatonetti NP. Structured deep embedding model to generate composite clinical indices from electronic health records for early detection of pancreatic cancer. <em>Patterns</em>. 2022 Dec 6:100636. PMCID: PMC9868652
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Artin MG, Lee KE, Pumpalova YS, Ingram MA, May BL, Park M, Hur C, Tatonetti NP. Deep learning on time series laboratory test results from electronic health records for early detection of pancreatic cancer. <em>Journal of Biomedical Informatics</em>. 2022 May, 20:104095. PMCID: PMC10286873
                             </p>
-                        </div>
-                        <div class="pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J and Bonde PN. Machine Learning in Cardiac Surgery: Predicting Mortality and Readmission. <em>American Society for Artificial Internal Organs</em>. 2022 May. pp. 10-1097. PMID: 35544455
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 2 -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Genomic and immunogenetic research</h3>
-                    <div class="space-y-4">
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Genomic and immunogenetic research</h3>
+<div class="space-y-4">
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Shue S, Zhang D. Genetic Associations in Non-Europeans with Pulmonary Fibrosis: Analysis of the All of Us Cohort. <em>American journal of respiratory and critical care medicine</em>. 2025 Aug 13(ja). PMCID: PMC12410450
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Karnati K, Prest M, Rustgi SD, Hur C, Kong XF, Kastrinos F. Impact of Population Screening for Lynch Syndrome: Insights from the All of Us Data. <em>Nature Communications</em>. 2025 Jan 9;16(1):523. PMCID: PMC11718231
                             </p>
-                        </div>
-                        <div class="pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Zheng B, Artin MG, Chung H, Bing C, Sun S, May BL, Hur C, Green PH, Wang TC, Park J, Kong XF. Immunogenetics of gastrointestinal cancers: A systematic review and retrospective survey of inborn errors of immunity in humans. <em>Journal of Gastroenterology and Hepatology</em>. 2022 Apr 5. PMCID: PMC9301767
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 3 -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Computational modeling and simulations</h3>
-                    <div class="space-y-4">
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Computational modeling and simulations</h3>
+<div class="space-y-4">
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Lim F, Prest M, Ferris J, Aziz Z, Agyekum A, Wagner S, Gulati R, Hur C. Quantifying the potential benefits of early detection for pancreatic cancer: results of a counterfactual simulation modeling analysis. <em>Scientific Reports</em>. 2023 Nov 16;13(1):20028. PMCID: PMC10654404
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Ingram MA, Lauren BN, Pumpalova YS, Park J, Lim F, Bates S, Kastrinos F, Manji GA, Kong CY, Hur Chin. Cost-effectiveness of neoadjuvant FOLFIRINOX vs gemcitabine plus nab-paclitaxel in borderline resectable/locally advanced pancreatic cancer patients. February 2022, <em>Cancer Reports</em>, DOI: 10.1002/cnr2.1565. PMCID: PMC9458514
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Geirsson A, Bonde PN. Mathematical Blueprint of a Mitral Valve. In <em>Seminars in thoracic and cardiovascular surgery</em>. 2019 Jan 8;31(3):399-411. PMID: 30633976.
                             </p>
-                        </div>
-                        <div class="pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Shin DA†, Park J†, Lee JC, Do Shin S, Kim HC. Computational Simulation of Passive Leg-Raising Effects on Hemodynamics During Cardiopulmonary Resuscitation. <em>Computer methods and programs in biomedicine</em>. 2017 Mar 1;140:195-200. (†These authors contributed equally to this work.). PMID: 28254076
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 4 -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Software and hardware integration, prototype design, and development</h3>
-                    <div class="space-y-4">
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Software and hardware integration, prototype design, and development</h3>
+<div class="space-y-4">
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Oki K, Hesselmann F, Geirsson A, Kaufmann T, Bonde P. Biologically Inspired, Open, Helicoid Impeller Design for Mechanical Circulatory Assist. <em>ASAIO Journal</em>. 2020 Aug;66(8):899-908. doi: 10.1097/MAT.0000000000001090. PMID: 32740350.
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Shin DA, Lee S, Cho YJ, Jheon S, Lee JC, Kim HC. Investigation of key circuit constituents affecting drug sequestration during extracorporeal membrane oxygenation treatment. <em>ASAIO Journal</em>. 2017 May 1;63(3):293-8. PMID: 27922880
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Letzen B, Park J, Tuzun Z, Bonde P. Design and Development of a Miniaturized Percutaneously Deployable Wireless Left Ventricular Assist Device: Early Prototypes and Feasibility Testing. <em>ASAIO Journal</em>. 2018 Mar 1;64(2):147-53. PMCID: PMC5823723
                             </p>
-                        </div>
-                        <div class="pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Yoon C, Lee JC, Jung JY, Kim DK, Kwak YH, Kim HC. Manikin-integrated digital measuring system for assessment of infant cardiopulmonary resuscitation techniques. <em>IEEE J Biomed Health Inform</em>. 2014 Sep;18(5):1659-67. doi: 10.1109/JBHI.2013.2288641. Epub 2013 Nov 5. PMID: 24235316.
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 5 -->
-                <div class="mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Image & signal processing</h3>
-                    <div class="space-y-4">
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+</div>
+</div>
+<!-- Category 5 -->
+<div class="mb-4">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Image &amp; signal processing</h3>
+<div class="space-y-4">
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Waters BH†, Park J†, Bouwmeester JC, Valdovinos J, Geirsson A, Sample AP, Smith JR, Bonde P. Electrical power to run ventricular assist devices using the Free-range Resonant Electrical Energy Delivery system. <em>The Journal of Heart and Lung Transplantation</em>. 2018 Dec 1;37(12):1467-74. (†These authors contributed equally to this work.) PMCID: PMC6240491
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Bouwmeester JC, Park J, Valdovinos J, Bonde P. Wave intensity analysis of right ventricular function during pulsed operation of rotary left ventricular assist devices. <em>ASAIO Journal</em>. 2019 Jul 1;65(5):465-72. PMCID: PMC6335194
                             </p>
-                        </div>
-                        <div class="border-b border-gray-200 pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="border-b border-gray-200 pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Bouwmeester JC, Park J, Geirsson A, Valdovinos J, Bonde P. Quantification of pulsed operation of rotary left ventricular assist devices with wave intensity analysis. <em>ASAIO Journal</em>. 2019 May 1;65(4):324-30. PMCID: PMC6251778
                             </p>
-                        </div>
-                        <div class="pb-3">
-                            <p class="text-gray-700 text-sm leading-relaxed">
+</div>
+<div class="pb-3">
+<p class="text-gray-700 text-sm leading-relaxed">
                                 Park J, Lee GH, Yull Park J, Lee JC, Kim HC. Hypergravity-induced multicellular spheroid generation with different morphological patterns precisely controlled on a centrifugal microfluidic platform. <em>Biofabrication</em>. 2017 Nov 14;9(4):045006. doi: 10.1088/1758-5090/aa9472. PMID: 29045238.
                             </p>
-                        </div>
-                    </div>
-                </div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-gray-200">
+<a class="text-blue-600 hover:text-blue-800 font-medium" href="https://scholar.google.com/citations?hl=en&amp;user=T7c9nmUAAAAJ">View complete publication list on Google Scholar →</a>
+</div>
+</div>
+</div>
+<!-- Team Section -->
 
-                <div class="mt-8 pt-6 border-t border-gray-200">
-                    <a href="https://scholar.google.com/citations?hl=en&user=T7c9nmUAAAAJ" class="text-blue-600 hover:text-blue-800 font-medium">View complete publication list on Google Scholar →</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Team Section -->
-        <div id="team" class="section-content">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Team</h2>
-                <div class="space-y-6">
-                    <div class="border-l-4 border-blue-600 pl-4 py-2">
-                        <h3 class="font-semibold text-lg text-gray-900">Jiheum Park, PhD</h3>
-                        <p class="text-gray-600 text-sm mt-1 leading-relaxed">
-                            Assistant Professor <br>
-                            Weill Cornell Medicine<br>
-                            Member, Meyer Cancer Center (MCC)<br>
-                            James J. Peters VA Medical Center, Research Scientist (WOC)
-                        </p>
-                    </div>
-                    <div class="border-l-4 border-blue-600 pl-4 py-2">
-                        <h3 class="font-semibold text-lg text-gray-900">Jiyoon Lee</h3>
-                        <p class="text-gray-600 mt-1">Columbia University M.Sc. Candidate in Biostatistics</p>
-                    </div>
-                    <div class="border-l-4 border-blue-600 pl-4 py-2">
-                        <h3 class="font-semibold text-lg text-gray-900">Jeong Yun (John) Yang, M.D.</h3>
-                        <p class="text-gray-600 mt-1">T32 Postdoctoral Gastroenterology Fellow</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Funding Section -->
-        <div id="funding" class="section-content">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Funding</h2>
-                
-                <div class="space-y-8">
-                    <!-- Active Grant 1 -->
-                    <div class="border-l-4 border-green-600 pl-4 py-2">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
-                        </div>
-                        <div class="space-y-1 text-sm">
-                            <p><strong>Agency:</strong> NIH NIBIB R01</p>
-                            <p><strong>Title:</strong> Scalable Multi-Cancer Early Detection Using EHR Foundation Model with Interactive Clinical Explanations</p>
-                            <p><strong>P.I.:</strong> Park, J.</p>
-                            <p><strong>Project period:</strong> 09/01/2026 - 07/31/2030</p>
-                        </div>
-                    </div>
-                    <!-- Active Grant 2 -->
-                    <div class="border-l-4 border-green-600 pl-4 py-2">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
-                        </div>
-                        <div class="space-y-1 text-sm">
-                            <p><strong>Agency:</strong> NIH LLM R03</p>
-                            <p><strong>Title:</strong> A Scalable, Open-Source Generative LLM Tool for Automated Classification of Diagnostic Errors</p>
-                            <p><strong>P.I.:</strong> Park, J.</p>
-                            <p><strong>Project period:</strong> 05/01/2026 - 04/30/2028</p>
-                        </div>
-                    </div>
-                    <!-- Active Grant 3 -->
-                    <div class="border-l-4 border-green-600 pl-4 py-2">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
-                        </div>
-                        <div class="space-y-1 text-sm">
-                            <p><strong>Agency:</strong> DoD PCARP</p>
-                            <p><strong>Title:</strong> Enhancing Early Detection of Pancreatic Cancer Using GPT-Embedded EHR Models: A Novel Approach for Improved Predictive Performance and Interpretability</p>
-                            <p><strong>P.I.:</strong> Park, J.</p>
-                            <p><strong>Project period:</strong> 08/01/2025 - 07/31/2028</p>
-                        </div>
-                    </div>
-
-                    <!-- Active Grant 4 -->
-                    <div class="border-l-4 border-green-600 pl-4 py-2">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
-                        </div>
-                        <div class="space-y-1 text-sm">
-                            <p><strong>Agency:</strong> NIH NCI K25</p>
-                            <p><strong>Title:</strong> Early Detection of Pancreatic Cancer with Human-in-the-Loop Deep Learning</p>
-                            <p><strong>P.I.:</strong> Park, J.</p>
-                            <p><strong>Project period:</strong> 05/01/2023-04/30/2028</p>
-                        </div>
-                    </div>
-
-                    <!-- Completed Grant -->
-                    <div class="border-l-4 border-gray-400 pl-4 py-2">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold">Completed</span>
-                        </div>
-                        <div class="space-y-1 text-sm">
-                            <p><strong>Agency:</strong> NIH NCI R21</p>
-                            <p><strong>Title:</strong> Domain-Knowledge Informed Deep Learning for Early Detection of Pancreatic Cancer</p>
-                            <p><strong>P.I.:</strong> Hur, C.; Tatonetti, N. (Park, J. served as scientific lead and primary proposal developer during postdoctoral training)</p>
-                            <p><strong>Total costs:</strong> $432,170</p>
-                            <p><strong>Project period:</strong> 07/01/2021-06/30/2023</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- External Collaborators Section -->
-        <div id="collaborators" class="section-content">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+<!-- Funding Section -->
+<div class="section-content" id="funding">
+<div class="bg-white rounded-lg shadow-sm p-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Funding</h2>
+<div class="space-y-8">
+<!-- Active Grant 1 -->
+<div class="border-l-4 border-green-600 pl-4 py-2">
+<div class="flex items-center mb-2">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+</div>
+<div class="space-y-1 text-sm">
+<p><strong>Agency:</strong> NIH NIBIB R01</p>
+<p><strong>Title:</strong> Scalable Multi-Cancer Early Detection Using EHR Foundation Model with Interactive Clinical Explanations</p>
+<p><strong>P.I.:</strong> Park, J.</p>
+<p><strong>Project period:</strong> 09/01/2026 - 07/31/2030</p>
+</div>
+</div>
+<!-- Active Grant 2 -->
+<div class="border-l-4 border-green-600 pl-4 py-2">
+<div class="flex items-center mb-2">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+</div>
+<div class="space-y-1 text-sm">
+<p><strong>Agency:</strong> NIH LLM R03</p>
+<p><strong>Title:</strong> A Scalable, Open-Source Generative LLM Tool for Automated Classification of Diagnostic Errors</p>
+<p><strong>P.I.:</strong> Park, J.</p>
+<p><strong>Project period:</strong> 05/01/2026 - 04/30/2028</p>
+</div>
+</div>
+<!-- Active Grant 3 -->
+<div class="border-l-4 border-green-600 pl-4 py-2">
+<div class="flex items-center mb-2">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+</div>
+<div class="space-y-1 text-sm">
+<p><strong>Agency:</strong> DoD PCARP</p>
+<p><strong>Title:</strong> Enhancing Early Detection of Pancreatic Cancer Using GPT-Embedded EHR Models: A Novel Approach for Improved Predictive Performance and Interpretability</p>
+<p><strong>P.I.:</strong> Park, J.</p>
+<p><strong>Project period:</strong> 08/01/2025 - 07/31/2028</p>
+</div>
+</div>
+<!-- Active Grant 4 -->
+<div class="border-l-4 border-green-600 pl-4 py-2">
+<div class="flex items-center mb-2">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+</div>
+<div class="space-y-1 text-sm">
+<p><strong>Agency:</strong> NIH NCI K25</p>
+<p><strong>Title:</strong> Early Detection of Pancreatic Cancer with Human-in-the-Loop Deep Learning</p>
+<p><strong>P.I.:</strong> Park, J.</p>
+<p><strong>Project period:</strong> 05/01/2023-04/30/2028</p>
+</div>
+</div>
+<!-- Completed Grant -->
+<div class="border-l-4 border-gray-400 pl-4 py-2">
+<div class="flex items-center mb-2">
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold">Completed</span>
+</div>
+<div class="space-y-1 text-sm">
+<p><strong>Agency:</strong> NIH NCI R21</p>
+<p><strong>Title:</strong> Domain-Knowledge Informed Deep Learning for Early Detection of Pancreatic Cancer</p>
+<p><strong>P.I.:</strong> Hur, C.; Tatonetti, N. (Park, J. served as scientific lead and primary proposal developer during postdoctoral training)</p>
+<p><strong>Total costs:</strong> $432,170</p>
+<p><strong>Project period:</strong> 07/01/2021-06/30/2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- External Collaborators Section -->
+<div class="section-content" id="collaborators">
+<div class="bg-white rounded-lg shadow-sm p-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">
                     External Collaborators
                 </h2>
-        
-                <p class="text-gray-700 mb-6 leading-relaxed">
+<p class="text-gray-700 mb-6 leading-relaxed">
                     Our lab works closely with collaborators across the following institutions:
                 </p>
-        
-                <div class="space-y-3">
-        
-                    <!-- Columbia University -->
-                    <div class="flex items-start">
-                        <span class="text-gray-700 mr-2">•</span>
-                        <p class="text-gray-700">
-                            <strong>Columbia University</strong> —
-                            <span class="inline-flex flex-wrap items-center gap-x-4">
-                                <a href="https://sea-lab.space/"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="text-blue-600 hover:underline">
-                                    Xuhai “Orson” Xu, PhD
-                                </a>
-        
-                                <a href="https://www.dbmi.columbia.edu/profile/matthew-mcdermott/"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="text-blue-600 hover:underline">
-                                    Matthew McDermott, PhD
-                                <a href="https://www.cancer.columbia.edu/profile/fay-kastrinos-md/"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="text-blue-600 hover:underline">
-                                    Fay Kastrinos, MD
-                                </a>
-                            </span>
-                        </p>
-                    </div>
-        
-                    <!-- Cedars-Sinai -->
-                    <div class="flex items-start">
-                        <span class="text-gray-700 mr-2">•</span>
-                        <p class="text-gray-700">
-                            <strong>Cedars-Sinai Medical Center</strong> —
-                            <a href="https://tatonettilab.org/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-blue-600 hover:underline">
+<div class="space-y-3">
+<!-- Columbia University -->
+<div class="flex items-start">
+<span class="text-gray-700 mr-2">•</span>
+<p class="text-gray-700"><strong>Columbia University</strong> —
+<span class="inline-flex flex-wrap items-center gap-x-4">
+<a class="text-blue-600 hover:underline" href="https://sea-lab.space/" rel="noopener noreferrer" target="_blank">Xuhai “Orson” Xu, PhD</a>
+<a class="text-blue-600 hover:underline" href="https://www.dbmi.columbia.edu/profile/matthew-mcdermott/" rel="noopener noreferrer" target="_blank">Matthew McDermott, PhD</a>
+<a class="text-blue-600 hover:underline" href="https://www.cancer.columbia.edu/profile/fay-kastrinos-md/" rel="noopener noreferrer" target="_blank">Fay Kastrinos, MD</a>
+</span></p>
+</div>
+<!-- Cedars-Sinai -->
+<div class="flex items-start">
+<span class="text-gray-700 mr-2">•</span>
+<p class="text-gray-700">
+<strong>Cedars-Sinai Medical Center</strong> —
+                            <a class="text-blue-600 hover:underline" href="https://tatonettilab.org/" rel="noopener noreferrer" target="_blank">
                                 Nicholas Tatonetti, PhD
                             </a>
-                        </p>
-                    </div>
-        
-                    <!-- U.S. Department of Veterans Affairs -->
-                    <div class="flex items-start">
-                        <span class="text-gray-700 mr-2">•</span>
-                        <p class="text-gray-700">
-                            <strong>U.S. Department of Veterans Affairs</strong> —
-                            <a href="https://www.bvmrf.org/susan-bates-md"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-blue-600 hover:underline">
+</p>
+</div>
+<!-- U.S. Department of Veterans Affairs -->
+<div class="flex items-start">
+<span class="text-gray-700 mr-2">•</span>
+<p class="text-gray-700">
+<strong>U.S. Department of Veterans Affairs</strong> —
+                            <a class="text-blue-600 hover:underline" href="https://www.bvmrf.org/susan-bates-md" rel="noopener noreferrer" target="_blank">
                                 Susan Bates, MD
                             </a>
-                        </p>
-                    </div>
-        
-                    <!-- Mount Sinai -->
-                    <div class="flex items-start">
-                        <span class="text-gray-700 mr-2">•</span>
-                        <p class="text-gray-700">
-                            <strong>Mount Sinai</strong> —
-                            <a href="https://labs.icahn.mssm.edu/sigellab/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-blue-600 hover:underline">
+</p>
+</div>
+<!-- Mount Sinai -->
+<div class="flex items-start">
+<span class="text-gray-700 mr-2">•</span>
+<p class="text-gray-700">
+<strong>Mount Sinai</strong> —
+                            <a class="text-blue-600 hover:underline" href="https://labs.icahn.mssm.edu/sigellab/" rel="noopener noreferrer" target="_blank">
                                 Keith Sigel, MD, PhD
                             </a>
-                        </p>
-                    </div>
-        
-                    <!-- University of Birmingham -->
-                    <div class="flex items-start">
-                        <span class="text-gray-700 mr-2">•</span>
-                        <p class="text-gray-700">
-                            <strong>University of Birmingham (UK)</strong> —
-                            <a href="https://sites.google.com/view/acharjee-lab/home"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-blue-600 hover:underline">
+</p>
+</div>
+<!-- University of Birmingham -->
+<div class="flex items-start">
+<span class="text-gray-700 mr-2">•</span>
+<p class="text-gray-700">
+<strong>University of Birmingham (UK)</strong> —
+                            <a class="text-blue-600 hover:underline" href="https://sites.google.com/view/acharjee-lab/home" rel="noopener noreferrer" target="_blank">
                                 Animesh Acharjee
                             </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Positions Section -->
+<div class="section-content" id="positions">
+<div class="bg-white rounded-lg shadow-sm p-8">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Postdoctoral Opportunities</h2>
+<div class="space-y-4">
+<div class="border-l-4 border-blue-600 pl-4 py-2">
+<h3 class="font-semibold text-lg text-gray-900 mb-3">Postdoctoral Associate</h3>
+<p class="text-gray-700 leading-relaxed mb-3">We anticipate recruiting a postdoctoral researcher with a background in computer science, biomedical informatics, data science, statistics, or a related field. Research will focus on AI methods for early cancer detection and precision medicine using longitudinal health data.</p>
+<p class="text-gray-700">
+                            Please contact <a class="text-blue-600 hover:underline" href="mailto:jip7012@med.cornell.edu">jip7012@med.cornell.edu</a> with your CV and research interests.
                         </p>
-                    </div>
-        
-                </div>
-            </div>
-        </div>
-
-        <!-- Positions Section -->
-        <div id="positions" class="section-content">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Open Positions</h2>
-                <div class="space-y-4">
-                    <div class="border-l-4 border-blue-600 pl-4 py-2">
-                        <h3 class="font-semibold text-lg text-gray-900 mb-3">Postdoctoral Researcher</h3>
-                        <p class="text-gray-700 leading-relaxed mb-3">
-                            We welcome applications from individuals with backgrounds in engineering, computer science, biomedical informatics, data science, statistics, or related fields. This position is ideal for researchers who want to expand into clinical data science, longitudinal EHR modeling, and precision medicine. Experience with machine learning, computational modeling, or large-scale health data is especially valuable.
-                        </p>
-                        <p class="text-gray-700">
-                            Please contact <a href="mailto:jip7012@med.cornell.edu" class="text-blue-600 hover:underline">jip7012@med.cornell.edu</a> with your CV and research interests.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="max-w-6xl mx-auto px-6 py-8">
-            <p class="text-center text-gray-400">
-                © 2025 Jiheum Park Lab
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white mt-16">
+<div class="max-w-6xl mx-auto px-6 py-8">
+<p class="text-center text-gray-400">© 2026 Jiheum Park Lab</p>
+</div>
+</footer>
+<script>
+        function showSection(sectionId, button) {
             document.querySelectorAll('.section-content').forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Remove active class from all nav buttons
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            
-            // Show selected section
             document.getElementById(sectionId).classList.add('active');
-            
-            // Add active class to clicked button
-            event.target.closest('.nav-btn').classList.add('active');
+            button.classList.add('active');
         }
     </script>
 </body>
